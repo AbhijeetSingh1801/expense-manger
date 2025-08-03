@@ -1,17 +1,19 @@
 package com.expensetracker.service;
 
 import com.expensetracker.model.Expense;
+import com.expensetracker.util.FileUtil;
 import java.util.*;
 
 public class ExpenseManager {
 	private List<Expense> expenses = new ArrayList<>();
 
 	public ExpenseManager() {
-		this.expenses = new ArrayList<>();
+		this.expenses = FileUtil.loadExpenses();
 	}
 
 	public void addExpense(Expense expense) {
 		expenses.add(expense);
+        FileUtil.saveExpenses(expenses); 
 	}
     
 	public List<Expense> getAllExpenses() {
@@ -19,10 +21,6 @@ public class ExpenseManager {
 	}
 
 	public double getTotalExpense() {
-        double total = 0;
-        for (Expense e : expenses) {
-            total += e.getAmount();
-        }
-        return total;
+        return expenses.stream().mapToDouble(Expense::getAmount).sum();
     }
 }

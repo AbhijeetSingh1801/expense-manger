@@ -1,9 +1,9 @@
 package com.expensetracker;
 
-import com.expensetracker.ui.ConsoleUI;
+import com.expensetracker.ui.*;
 
 public class Main {
     public static void main(String[] args) {
-        new ConsoleUI().start();
+       new MainFrame().setVisible(true);
     }
 }

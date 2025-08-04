@@ -1,9 +1,10 @@
 package com.expensetracker.util;
 
-import com.expensetracker.model.Expense;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
+
+import com.expensetracker.model.Expense;
 
 public class FileUtil {
 	private static final String FILE_PATH = "expenses.csv";

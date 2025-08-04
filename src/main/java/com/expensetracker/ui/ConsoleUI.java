@@ -1,9 +1,10 @@
 package com.expensetracker.ui;
 
-import com.expensetracker.model.Expense;
-import com.expensetracker.service.ExpenseManager;
 import java.time.LocalDate;
 import java.util.Scanner;
+
+import com.expensetracker.model.Expense;
+import com.expensetracker.service.ExpenseManager;
 
 public class ConsoleUI {
     private final ExpenseManager manager = new ExpenseManager();

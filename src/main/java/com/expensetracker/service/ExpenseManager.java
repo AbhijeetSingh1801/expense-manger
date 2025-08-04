@@ -1,8 +1,9 @@
 package com.expensetracker.service;
 
+import java.util.*;
+
 import com.expensetracker.model.Expense;
 import com.expensetracker.util.FileUtil;
-import java.util.*;
 
 public class ExpenseManager {
 	private List<Expense> expenses = new ArrayList<>();
